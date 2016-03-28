@@ -1,0 +1,25 @@
+(require 'package)
+(add-to-list 'package-archives
+             '("melpa" . "https://melpa.org/packages/"))
+(package-initialize)
+(load "~/.emacs.d/elpa/elhome/elhome.el")
+(elhome-init)
+;; GUI misc settings
+(setq mac-command-modifier 'control)
+(setq mac-option-modifier 'meta)
+(setq visible-bell t)
+(menu-bar-mode 0)
+(tool-bar-mode 0)
+(scroll-bar-mode 0)
+(fringe-mode 0)
+
+(load-theme 'obsidian t)
+(helm-mode 1)
+(add-hook 'after-init-hook 'global-company-mode)
+(elscreen-start)
+(setq initial-buffer-choice t)
+(load "~/.emacs.d/elhome/settings/misc-settings.el")
+(load "~/.emacs.d/elhome/settings/mode-line-settings.el")
+;(require 'powerline)
+(require 'libmpdee)
+
